@@ -1,0 +1,14 @@
+{
+    "app1_DB_DUMMY": {
+      "target": {
+        "object": "DUMMY",
+        "schema": "SYS"
+      }
+    },
+    "app1_DB_OBJECTS": {
+      "target": {
+        "object": "OBJECTS",
+        "schema": "SYS"
+      }
+    }
+  }

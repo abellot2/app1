@@ -1,0 +1,14 @@
+procedure "InsertBulk"()
+language sqlscript
+sql security invoker
+as
+begin
+    -- this will run for 5 mins without increasing cpu/memory
+    declare i int;
+	i = 0;
+	for i in 1..20000
+	    do	
+		    insert into app1_DB_TESTTABLE select top 1 sysuuid||sysuuid from "app1_DB_OBJECTS" cross join "app1_DB_OBJECTS";
+    end for;
+    delete from app1_DB_TESTTABLE;
+end

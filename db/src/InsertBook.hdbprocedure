@@ -1,0 +1,7 @@
+procedure "InsertBook" (in id integer, in name nvarchar(100))
+language sqlscript
+sql security invoker
+as
+begin
+    insert into app1_DB_BOOKS values (:id, :name);
+end
